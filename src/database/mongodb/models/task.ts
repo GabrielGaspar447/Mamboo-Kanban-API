@@ -1,6 +1,6 @@
 import { Document, Schema, model, PaginateModel } from 'mongoose'
 import paginate from 'mongoose-paginate-v2'
-import { ITask } from '../../ts/interfaces'
+import { ITask } from '../../../ts/interfaces'
 
 interface TaskDocument extends ITask, Document {}
 
@@ -14,7 +14,6 @@ const taskSchema = new Schema<TaskDocument>({
   tags: [String]
 }, {
   timestamps: true,
-  collection: 'tasks',
   versionKey: false
 })
 
